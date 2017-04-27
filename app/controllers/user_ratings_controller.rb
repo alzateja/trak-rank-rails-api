@@ -27,7 +27,7 @@ class UserRatingsController < ApplicationController
   # PATCH/PUT /user_ratings/1
   def update
     if @user_rating.update(user_rating_params)
-      render json: @user_rating
+      head :no_content
     else
       render json: @user_rating.errors, status: :unprocessable_entity
     end
@@ -36,6 +36,7 @@ class UserRatingsController < ApplicationController
   # DELETE /user_ratings/1
   def destroy
     @user_rating.destroy
+    head :no_content
   end
 
   private
@@ -44,8 +45,8 @@ class UserRatingsController < ApplicationController
       @user_rating = UserRating.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+      # Only allow a trusted parameter "white list" through.
     def user_rating_params
-      params.require(:user_rating).permit(:user_id, :album_id, :ratings, :comment, :status)
+        params.require(:user_rating).permit(:user_id, :album_id, :ratings, :comment, :status)
     end
 end
