@@ -27,7 +27,7 @@ class AlbumsController < ApplicationController
   # PATCH/PUT /albums/1
   def update
     if @album.update(album_params)
-      render json: @album
+      head :no_content
     else
       render json: @album.errors, status: :unprocessable_entity
     end
@@ -36,6 +36,7 @@ class AlbumsController < ApplicationController
   # DELETE /albums/1
   def destroy
     @album.destroy
+    head :no_content
   end
 
   private
