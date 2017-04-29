@@ -1,6 +1,7 @@
 #!/bin/bash
 
-EMAIL="test@123.com" PASSWORD="NewPassword"
+#EMAIL="test@123.com" PASSWORD="1234"
+EMAIL="testuser2@123.com" PASSWORD="123"
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/sign-in"
