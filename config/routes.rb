@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get '/test' => 'user_ratings#test'
   get '/testing' => 'examples#test'
   resources :users, only: [:index, :show]
-  resources :albums, except: [:new, :edit]
-  # resources :albums, only: [:index, :show]
-  resources :user_ratings, except: [:new, :edit]
+  resources :albums, except: [:new, :edit ]
+  resources :user_ratings, except: [:new, :edit, :show]
+  get '/my-ratings' => 'user_ratings#my_ratings'
+  get '/user_ratings/:albumid' => 'user_ratings#show'
 end
