@@ -38,6 +38,9 @@ class ExamplesController < OpenReadController
     end
   end
 
+  def test
+    render json: current_user.examples
+  end
   # DELETE /examples/1
   # DELETE /examples/1.json
   def destroy
@@ -45,6 +48,7 @@ class ExamplesController < OpenReadController
 
     head :no_content
   end
+
 
   def set_example
     @example = current_user.examples.find(params[:id])
