@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   get '/test' => 'user_ratings#test'
   get '/testing' => 'examples#test'
   resources :users, only: [:index, :show]
-  resources :albums, except: [:new, :edit ]
+  # Only allow add albums adding authentication
+  resources :albums, only: [:create, :index, :show]
   resources :user_ratings, except: [:new, :edit, :show]
   get '/my-ratings' => 'user_ratings#my_ratings'
-  get '/user_ratings/:albumid' => 'user_ratings#show'
+  # update routes for find album rating
+  get '/user_ratings/by_album/:albumid' => 'user_ratings#findalbumrating'
 end

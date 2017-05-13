@@ -1,6 +1,6 @@
 class UserRatingsController <  OpenReadController
   before_action :set_user_rating, only: [ :update, :destroy]
-  before_action :set_rating_id, only: [:show]
+  before_action :set_rating_id, only: [:findalbumrating]
 
   # GET /user_ratings
   def index
@@ -11,10 +11,14 @@ class UserRatingsController <  OpenReadController
   end
 
   # GET /user_ratings/1
-  def show
+  # def show
+  #   render json: @record_id
+  # end
+  # GET /user_ratings
+
+  def findalbumrating
     render json: @record_id
   end
-  # GET /user_ratings
 
   def my_ratings
 
@@ -59,7 +63,7 @@ class UserRatingsController <  OpenReadController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_user_rating
-      @user_rating = UserRating.find(params[:id])
+      @user_rating = current_user.user_ratings.find(params[:id])
     end
 
     def set_rating_id
