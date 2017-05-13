@@ -1,8 +1,8 @@
-#!/bin/bash
-ID="37"
-TOKEN="BAhJIiVmZTU1MWY1MjVkNjM5ZTg5YmM5MmMxOTRjNWRkNDcyZQY6BkVG--2e796140892d7d1455fb15b5351c07332343abe1"
+TOKEN="BAhJIiU0Mjc3ZWIzZmJjY2FlZDNlZjM4ZmU3ZTMyYmQ1Y2MzNgY6BkVG--6956b21fd92c0b1e516b64cd98af13bcbbe3779e"
+
+ID="51"
 API="${API_ORIGIN:-http://localhost:4741}"
-URL_PATH="/sign-out"
+URL_PATH="/user_ratings"
 curl "${API}${URL_PATH}/${ID}" \
   --include \
   --request DELETE \

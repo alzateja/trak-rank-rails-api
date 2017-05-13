@@ -1,10 +1,8 @@
-TOKEN="BAhJIiU4NDgyMDBkNTE4NTBjZmJjYzlmY2UyMjYxYmFmZWY2NAY6BkVG--c33b9bc2374dc2bafd1dadaf49cee49157eafe0e"
-AlbumID="5"
-User_ID="3"
+TOKEN="BAhJIiU0Mjc3ZWIzZmJjY2FlZDNlZjM4ZmU3ZTMyYmQ1Y2MzNgY6BkVG--6956b21fd92c0b1e516b64cd98af13bcbbe3779e"
+ID="51"
 
 
 
-ID="?album_id=${AlbumID}"
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/user_ratings/"

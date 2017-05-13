@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-EMAIL="testuser2@123.com" PASSWORD="123"
+EMAIL="finaltest@123.com" PASSWORD="123"
 
 #sh scripts/create-entry.sh
 
